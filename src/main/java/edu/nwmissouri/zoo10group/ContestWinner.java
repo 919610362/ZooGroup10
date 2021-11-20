@@ -1,32 +1,41 @@
 package edu.nwmissouri.zoo10group;
 
 import java.util.Date;
+
 /**
  *
  * @author Manish Goud Bandharapu
  */
 public class ContestWinner extends Visitor {
-    
-   
+
     private String ContestName;
     private Date DateOfContest;
-    
+
     /**
      * Initializing Contest Winner
-     * 
+     *
      */
-    public ContestWinner(){
-        this.ContestName= "Ali baba Animals";
-        this.DateOfContest= new Date();
-        this.entranceFee=50;
-        this.discount=50;
-        this.groupSize=1;
-       
+    public ContestWinner() {
+        this.ContestName = "Ali baba Animals";
+        this.DateOfContest = new Date();
+        this.entranceFee = 50;
+        this.discount = 50;
+        this.groupSize = 1;
+
+        try {
+            int a[] = new int[4];
+            System.out.println("Access element three :" + a[8]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception thrown  :" + e);
+        } finally {
+            System.out.println("Out of the block");
+        }
+
     }
 
     /**
      * Declaring the contest Name
-     * 
+     *
      * @return
      */
     public String getContestName() {
@@ -43,7 +52,7 @@ public class ContestWinner extends Visitor {
 
     /**
      * Declaring the date of contest
-     * 
+     *
      * @return
      */
     public Date getDateOfContest() {
@@ -60,7 +69,7 @@ public class ContestWinner extends Visitor {
 
     /**
      * Declaring the Entrance fee
-     *  
+     *
      * @return
      */
     public double getEntranceFee() {
@@ -77,6 +86,7 @@ public class ContestWinner extends Visitor {
 
     /**
      * Declaring the discount
+     *
      * @return
      */
     public double getDiscount() {
@@ -93,7 +103,7 @@ public class ContestWinner extends Visitor {
 
     /**
      * Declaring the group size
-     *  
+     *
      * @return
      */
     public int getGroupSize() {
@@ -107,8 +117,5 @@ public class ContestWinner extends Visitor {
     public void setGroupSize(int groupSize) {
         this.groupSize = groupSize;
     }
-    
 
-    
-    
 }
